@@ -29,7 +29,6 @@
     <register />
     <profile />
   </div>
-  </div>
 </template>
 
 <script>
