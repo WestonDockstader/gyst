@@ -28,7 +28,6 @@
     <login />
     <register />
   </div>
-  </div>
 </template>
 
 <script>
