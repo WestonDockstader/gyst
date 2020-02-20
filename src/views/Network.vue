@@ -42,7 +42,8 @@
             <!-- v-for for each row -->
             <!-- Dummy Data -->
             <tr>
-              <th scope="row">arrow</th>
+              <!-- This is Janky (multiple instances) -->
+              <th scope="row" @click="showInput = !showInput && id == 1" class="hover">arrow</th>
               <th>
                 <img src="../assets/user_fill.png" alt="UserImg" class="userImg" /> Jimmy Tester
               </th>
@@ -50,23 +51,30 @@
                 <ul>
                   <!-- v-for for each skill -->
                   <li>xUnit</li>
-                  <li>nUnit</li>
-                  <li>Selenium</li>
+                  <!-- Also Janky (multiple instances) -->
+                  <div v-if="showInput && id == 1">
+                    <li>nUnit</li>
+                    <li>Selenium</li>
+                  </div>
                 </ul>
               </th>
               <th>
                 <ul>
                   <!-- v-for for each domain -->
                   <li>Testing</li>
-                  <li>QA</li>
+                  <div v-if="showInput && id == 1">
+                    <li>QA</li>
+                  </div>
                 </ul>
               </th>
               <th>
                 <ul>
                   <!-- v-for for each platform -->
                   <li>Platform 1</li>
-                  <li>Platform 2</li>
-                  <li>Platform 3</li>
+                  <div v-if="showInput && id == 1">
+                    <li>Platform 2</li>
+                    <li>Platform 3</li>
+                  </div>
                 </ul>
               </th>
               <th>
@@ -79,7 +87,7 @@
               </th>
             </tr>
             <tr>
-              <th scope="row">arrow</th>
+              <th scope="row" @click="showInput = !showInput && id == 2" class="hover">arrow</th>
               <th>
                 <img src="../assets/user_fill.png" alt="UserImg" class="userImg" /> Timmy Tester
               </th>
@@ -87,23 +95,29 @@
                 <ul>
                   <!-- v-for for each skill -->
                   <li>Java</li>
-                  <li>C#</li>
-                  <li>Javascript</li>
+                  <div v-if="showInput && id == 2">
+                    <li>C#</li>
+                    <li>Javascript</li>
+                  </div>
                 </ul>
               </th>
               <th>
                 <ul>
                   <!-- v-for for each domain -->
                   <li>Web Development</li>
-                  <li>Mobile Development</li>
+                  <div v-if="showInput && id == 2">
+                    <li>Mobile Development</li>
+                  </div>
                 </ul>
               </th>
               <th>
                 <ul>
                   <!-- v-for for each platform -->
                   <li>Platform 1</li>
-                  <li>Platform 2</li>
-                  <li>Platform 3</li>
+                  <div v-if="showInput && id == 2">
+                    <li>Platform 2</li>
+                    <li>Platform 3</li>
+                  </div>
                 </ul>
               </th>
               <th>
@@ -120,13 +134,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
-        <button class="mx-1">First Page</button>
-        <button>Previous Page</button>
+      <div class="col-12 my-2">
+        <button class="mx-1">FP</button>
+        <button>PP</button>
         <input type="text" class="inputPage mx-1" />
         <p class="inline mx-1">of # pages</p>
-        <button>Next Page</button>
-        <button class="mx-1">Last Page</button>
+        <button>NP</button>
+        <button class="mx-1">LP</button>
       </div>
     </div>
   </div>
@@ -136,7 +150,10 @@
 export default {
   name: "Network",
   data() {
-    return {};
+    return {
+      showInput: false,
+      id: 2
+    };
   },
   methods: {}
 };
@@ -153,6 +170,9 @@ button {
   width: 34px;
   height: 25px;
   border-radius: 3px;
+}
+.hover:hover {
+  cursor: pointer;
 }
 .inputPage {
   width: 50px;
