@@ -27,7 +27,6 @@
     </div>
     <login />
     <register />
-    <profile />
   </div>
 </template>
 
