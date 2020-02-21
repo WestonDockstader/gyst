@@ -1,5 +1,5 @@
 <template>
-      <b-table class="table" striped sticky-header head-variant="light" :fields="fields" :items="items"></b-table>
+      <b-table class="table" striped sticky-header head-variant="light" :fields="fields" :fixed="fixed" :items="items"></b-table>
 </template>
 
 
@@ -19,6 +19,7 @@ export default {
         { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
         { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
         ],
+        fixed: true,
     };
   },
   computed: {},
@@ -29,8 +30,6 @@ export default {
 
 
 <style scoped>
-.thead {
-  background-color: #f26323;
-}
+
 
 </style>
