@@ -18,7 +18,11 @@
       </div>
       <div class="col-6 text-right">
         <input type="text" placeholder="Search name, skill, domain, place" class="searchInput" />
-        <img src="../assets/AddButton.png" alt="AddButton" />
+        <span>
+          <!-- Potential problem with css if search string is really long -->
+          <i class="fas fa-search"></i>
+        </span>
+        <img src="../assets/AddButton.png" alt="AddButton" class="ml-2" />
         <!-- Add @click to img for button effect -->
         <img src="../assets/Component 5 – 3.png" alt="FilterButton" />
         <!-- Add @click to img for button effect -->
@@ -135,12 +139,20 @@
     </div>
     <div class="row">
       <div class="col-12 my-2">
-        <button class="mx-1">FP</button>
-        <button>PP</button>
+        <button class="mx-1">
+          <i class="fas fa-angle-double-left"></i>
+        </button>
+        <button>
+          <i class="fas fa-angle-left"></i>
+        </button>
         <input type="text" class="inputPage mx-1" />
         <p class="inline mx-1">of # pages</p>
-        <button>NP</button>
-        <button class="mx-1">LP</button>
+        <button>
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <button class="mx-1">
+          <i class="fas fa-angle-double-right"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -189,6 +201,9 @@ li {
 }
 .searchInput {
   width: 276px;
+}
+span {
+  margin-left: -20px;
 }
 .tableHeader {
   background-color: #f26323;
