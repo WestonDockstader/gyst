@@ -155,10 +155,12 @@
         </button>
       </div>
     </div>
+    <EmployeeFilters />
   </div>
 </template>
 
 <script>
+import EmployeeFilters from "../components/network/EmployeeFilters";
 export default {
   name: "Network",
   data() {
@@ -167,7 +169,8 @@ export default {
       id: 2
     };
   },
-  methods: {}
+  methods: {},
+  components: { EmployeeFilters }
 };
 </script>
 
