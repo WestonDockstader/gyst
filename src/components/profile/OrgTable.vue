@@ -1,57 +1,35 @@
 <template>
-<table class="table">
-  <thead class="thead text-white">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+      <b-table class="table" striped sticky-header head-variant="light" :fields="fields" :fixed="fixed" :items="items"></b-table>
 </template>
 
 
 <script>
 export default {
-    name: 'table',
-    data(){
-        return {}
-    },
-    computed:{},
-    methods:{},
-    components:{}
-}
+  name: "table",
+  data() {
+    return {
+        fields: ['SKILL_NAME', 'DOMAIN', 'PLATFORMS', 'RATINGS_M', 'RATINGS_P'],
+        items: [
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        { SKILL_NAME: 'Lorem', DOMAIN: 'Ipsum', PLATFORMS: 'FooBar', RATINGS_M: 5, RATINGS_P:5 },
+        ],
+        fixed: true,
+    };
+  },
+  computed: {},
+  methods: {},
+  components: {}
+};
 </script>
 
 
 <style scoped>
-.thead{
-background-color: #f26323;
-}
-tbody tr:nth-of-type(even) {
- background-color: #fbcab4;
-}
 
 
 </style>
