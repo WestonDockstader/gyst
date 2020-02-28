@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="card-body mt-5">
+    <div class="card-body mt-5 mx-5">
       <div class="row">
         <div class="col-4 position-absolute">
           <img
@@ -25,24 +25,33 @@
           <h3 class="pt-5 orange">Projects:</h3>
         </div>
       </div>
-      <div class="row p-5">
-        <b-tabs content-class="mt-3 font">
-          <b-tab title="SKILLS" active>
+      <div class="pt-5">
+        <vue-tabs>
+          <v-tab title="SKILLS">
+            <div class="col-12">
+
             <SkillsTable />
-          </b-tab>
-          <b-tab title="CERTIFICATIONS">
+            </div>
+          </v-tab>
+          <v-tab title="CERTIFICATIONS">
             <CertsTable />
-          </b-tab>
-          <b-tab title="ORG CHART">
-            <OrgTable/>
-          </b-tab>
-          <b-tab title="LEARNING GROUPS">
+          </v-tab>
+          <v-tab title="ORG CHART">
+            <OrgTable />
+          </v-tab>
+          <v-tab title="LEARNING GROUPS">
             <LearnAndTable />
-          </b-tab>
-          <b-tab title="PERSONAL GROWTH">
-            <PersonalGrowthTable />
-          </b-tab>
-        </b-tabs>
+          </v-tab>
+          <v-tab title="PERSONAL GROWTH">
+            <PersonalGrowth />
+          </v-tab>
+        </vue-tabs>
+      </div>
+      <div v-if="skillsActive">
+        <SkillsTable />
+      </div>
+      <div v-else-if="certification">
+        <CertsTable />
       </div>
     </div>
   </div>
@@ -54,7 +63,8 @@ import CertsTable from "../components/profile/CertsTable";
 import OrgTable from "../components/profile/OrgTable";
 import LearnAndTable from "../components/profile/LearnAndTable";
 import PersonalGrowthTable from "../components/profile/PersonalGrowthTable";
-
+import { VueTabs, VTab } from "vue-nav-tabs";
+import "vue-nav-tabs/themes/vue-tabs.css";
 
 export default {
   name: "profile",
@@ -63,19 +73,19 @@ export default {
     CertsTable,
     PersonalGrowthTable,
     LearnAndTable,
-    OrgTable
+    OrgTable,
+    VueTabs,
+    VTab
   },
-  data() {
-    return {};
+  data: function() {
+    return {
+      skillsActive: false,
+      certification: false
+    };
   },
   methods: {}
 };
 </script>
-
-
-
-
-
 
 <style>
 .Image-2 {
@@ -93,7 +103,9 @@ export default {
 .position {
   padding-left: 30%;
 }
-a {
-  color: #474c53;
+.active_tab {
+  font-weight: bold;
+  color: #ffa737 !important;
 }
+
 </style>

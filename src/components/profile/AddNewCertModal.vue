@@ -1,6 +1,6 @@
 <template>
   <div
-    id="add-new-skill-modal"
+    id="add-new-cert-modal"
     class="modal fade"
     tabindex="-1"
     role="dialog"
@@ -10,7 +10,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">ADD NEW SKILL</h5>
+          <h5 class="modal-title">ADD NEW CERTIFICATION</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -70,24 +70,17 @@
 
 
 <script>
-import { StarRating } from "vue-rate-it";
 export default {
-  name: "add-new-skill-modal",
+  name: "add-new-cert-modal",
   data() {
     return {};
   },
   computed: {},
   methods: {},
-  components: { StarRating }
+  components: {}
 };
 </script>
 
 
 <style scoped>
-.btn {
-  background-color: #f26323;
-}
-.color {
-  background-color: #474c53;
-}
 </style>
