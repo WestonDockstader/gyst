@@ -31,6 +31,14 @@
               alt="FilterButton"
               @click="filter = !filter"
               class="hover"
+              v-if="!filter"
+            />
+            <img
+              src="../assets/Component 5 – 2.png"
+              alt="FilterButton"
+              @click="filter = !filter"
+              class="hover"
+              v-else
             />
             <!-- Add @click to img for button effect -->
           </div>
@@ -177,7 +185,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2">
+      <div class="col-2 marginFix">
         <div v-if="filter">
           <EmployeeFilters />
         </div>
@@ -229,6 +237,9 @@ button {
 }
 li {
   padding-bottom: 5px;
+}
+.marginFix {
+  margin-left: -30px;
 }
 .searchInput {
   width: 276px;
