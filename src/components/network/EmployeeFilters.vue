@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-3">
+    <div class="row m-auto">
+      <div class="offset-9 col-3">
         <h3>Employee Filters</h3>
         <p class="text-right">
           <u>clear all</u>
@@ -9,10 +9,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-3">
+      <div class="offset-9 col-3">
         <!-- Skills -->
         <h5 class="mr-4">Skills</h5>
         <input type="text" placeholder="Search" />
+        <span>
+          <!-- Potential problem with css if search string is really long -->
+          <i class="fas fa-search"></i>
+        </span>
         <div class="scroll">
           <div class="custom-control custom-checkbox mt-1 text-left">
             <input type="checkbox" class="custom-control-input" id="customCheck1" />
@@ -35,6 +39,10 @@
         <!-- Domain -->
         <h5 class="mr-3">Domain</h5>
         <input type="text" placeholder="Search" />
+        <span>
+          <!-- Potential problem with css if search string is really long -->
+          <i class="fas fa-search"></i>
+        </span>
         <div class="scroll">
           <div class="custom-control custom-checkbox mt-1 text-left">
             <input type="checkbox" class="custom-control-input" id="customCheck5" />
@@ -54,8 +62,13 @@
           </div>
         </div>
         <br />
+        <!-- Platform -->
         <h5 class="mr-3">Platform</h5>
         <input type="text" placeholder="Search" />
+        <span>
+          <!-- Potential problem with css if search string is really long -->
+          <i class="fas fa-search"></i>
+        </span>
         <div class="scroll">
           <div class="custom-control custom-checkbox mt-1 text-left">
             <input type="checkbox" class="custom-control-input" id="customCheck9" />
@@ -75,6 +88,7 @@
           </div>
         </div>
         <br />
+        <!-- Average Rating -->
         <h5>Average Rating</h5>
       </div>
     </div>
@@ -108,6 +122,9 @@ input {
 }
 .scroll {
   overflow: auto;
+}
+span {
+  margin-left: -20px;
 }
 u {
   color: #f26323;

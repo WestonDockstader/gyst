@@ -24,7 +24,12 @@
         </span>
         <img src="../assets/AddButton.png" alt="AddButton" class="ml-2" />
         <!-- Add @click to img for button effect -->
-        <img src="../assets/Component 5 – 3.png" alt="FilterButton" />
+        <img
+          src="../assets/Component 5 – 3.png"
+          alt="FilterButton"
+          @click="filter = !filter"
+          class="hover"
+        />
         <!-- Add @click to img for button effect -->
       </div>
     </div>
@@ -47,7 +52,14 @@
             <!-- Dummy Data -->
             <tr>
               <!-- This is Janky (multiple instances) -->
-              <th scope="row" @click="showInput = !showInput && id == 1" class="hover">arrow</th>
+              <th scope="row" @click="showInput = !showInput && id == 1" class="hover">
+                <div v-if="showInput && id == 1">
+                  <img src="../assets/upButton.png" alt="upArrow" />
+                </div>
+                <div v-else>
+                  <img src="../assets/downButton.png" alt="downArrow" />
+                </div>
+              </th>
               <th>
                 <img src="../assets/user_fill.png" alt="UserImg" class="userImg" /> Jimmy Tester
               </th>
@@ -91,7 +103,14 @@
               </th>
             </tr>
             <tr>
-              <th scope="row" @click="showInput = !showInput && id == 2" class="hover">arrow</th>
+              <th scope="row" @click="showInput = !showInput && id == 2" class="hover">
+                <div v-if="showInput && id == 2">
+                  <img src="../assets/upButton.png" alt="upArrow" />
+                </div>
+                <div v-else>
+                  <img src="../assets/downButton.png" alt="downArrow" />
+                </div>
+              </th>
               <th>
                 <img src="../assets/user_fill.png" alt="UserImg" class="userImg" /> Timmy Tester
               </th>
@@ -155,7 +174,9 @@
         </button>
       </div>
     </div>
-    <EmployeeFilters />
+    <div v-if="filter">
+      <EmployeeFilters />
+    </div>
   </div>
 </template>
 
@@ -166,7 +187,8 @@ export default {
   data() {
     return {
       showInput: false,
-      id: 2
+      id: 2,
+      filter: false
     };
   },
   methods: {},
