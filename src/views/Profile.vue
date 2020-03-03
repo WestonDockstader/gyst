@@ -28,10 +28,7 @@
       <div class="pt-5">
         <vue-tabs>
           <v-tab title="SKILLS">
-            <div class="col-12">
-
             <SkillsTable />
-            </div>
           </v-tab>
           <v-tab title="CERTIFICATIONS">
             <CertsTable />
@@ -107,5 +104,4 @@ export default {
   font-weight: bold;
   color: #ffa737 !important;
 }
-
 </style>

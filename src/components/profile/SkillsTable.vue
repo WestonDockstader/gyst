@@ -1,58 +1,29 @@
 <template>
-  <div class="row d-flex justify-content-end">
+  <div class="row">
     <div class="col-12 d-flex justify-content-between my-3">
-    <input type="text" id="searchbar" @change="searchTable()" placeholder="Search" />
+      <input
+        type="text"
+        v-model="search"
+        placeholder="Search"
+      />
       <button class="btn">
         <i class="fas fa-plus-circle fa-lg" data-toggle="modal" data-target="#add-new-skill-modal"></i>
       </button>
-    <AddNewSkillModal />
+      <AddNewSkillModal />
     </div>
+    <!-- hard coded some fake data in the table -->
     <div class="col-12 table-wrapper-scroll-y my-custom-scrollbar">
       <table id="skillsTable" class="table table-bordered">
         <thead class="thead text-white">
-          <tr>
-            <th scope="col">SKILL NAME</th>
-            <th scope="col">DOMAIN</th>
-            <th scope="col">PLATFORMS</th>
-            <th scope="col">RATINGS M</th>
-            <th scope="col">RATINGS P</th>
-          </tr>
+            <th v-for="header in tableHeader" :key="header">{{header}}</th>
         </thead>
         <tbody>
-          <tr>
-            <td>LOREM</td>
-            <td>IPSUM</td>
-            <td>FOOBAR</td>
-            <td>5</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>LOREM</td>
-            <td>IPSUM</td>
-            <td>FOOBAR</td>
-            <td>5</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>LOREM</td>
-            <td>IPSUM</td>
-            <td>FOOBAR</td>
-            <td>5</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>LOREM</td>
-            <td>IPSUM</td>
-            <td>FOOBAR</td>
-            <td>5</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Gen</td>
-            <td>IPSUM</td>
-            <td>FOOBAR</td>
-            <td>5</td>
-            <td>5</td>
+          <tr v-for="item in filteredSkills" :key="item">
+            <td>{{item.skillName}}</td>
+            <td>{{item.domain}}</td>
+            <td>{{item.platforms}}</td>
+            <td>{{item.ratingsM}}</td>
+            <td>{{item.ratingsP}}</td>
           </tr>
         </tbody>
       </table>
@@ -66,33 +37,21 @@ import AddNewSkillModal from "./AddNewSkillModal";
 export default {
   name: "skills-table",
   data() {
-    return {};
+    return{
+      tableHeader:["SKILL NAME","DOMAIN","PLATFORMS","RATINGS(M)","RATINGS(P)"],
+      skills:
+        [{skillName: "Javascript", domain: "UX/UI", platforms:"All Web Browsers", ratingsM: 5, ratingsP: 5}, {skillName: "C#", domain: "Back-end development", platforms:"MacOS", ratingsM: 5, ratingsP: 5}, {skillName: "LOREM", domain: "IPSUM", platforms:"FOOBAR", ratingsM: 5, ratingsP: 5}, {skillName: "LOREM", domain: "IPSUM", platforms:"FOOBAR", ratingsM: 5, ratingsP: 5}, {skillName: "LOREM", domain: "IPSUM", platforms:"FOOBAR", ratingsM: 5, ratingsP: 5}, {skillName: "LOREM", domain: "IPSUM", platforms:"FOOBAR", ratingsM: 5, ratingsP: 5}],
+      search: ""
+    }
   },
   computed: {
-
-  },
-  methods: {
-  searchTable() {
-    // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("searchbar");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("skillsTable");
-  tr = table.getElementsByTagName("tr");
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+    //This filters through each item in the table (rows and columns) to display the row that contains the information entered in the searchbar. Currently case sensitive and search entry MUST match item in datatable exactly. 
+    filteredSkills(){
+      return this.skills.filter((item) => {
+        return item.skillName.match(this.search) || item.domain.match(this.search) || item.platforms.match(this.search)})
     }
-  }
-}
   },
+  methods: {},
   components: { AddNewSkillModal }
 };
 </script>
@@ -125,5 +84,4 @@ tr:nth-child(even) {
   padding-left: 10px;
   border: 1px solid #ddd;
 }
-
 </style>

@@ -52,6 +52,7 @@
                 inactive-color="#ffffff"
                 active-color="#ffd055"
                 :increment="1.0"
+                :max-rating="10"
                 class="d-flex justify-content-center"
               ></star-rating>
             </div>
