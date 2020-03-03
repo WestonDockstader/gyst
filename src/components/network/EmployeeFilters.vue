@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="sideBorder">
     <div>
-      <h3>Employee Filters</h3>
+      <h3 class="mt-2">Employee Filters</h3>
       <p class="text-right">
         <u>clear all</u>
       </p>
@@ -32,7 +32,7 @@
       </div>
       <br />
       <!-- Domain -->
-      <h5>Domain</h5>
+      <h5 class="mr-1">Domain</h5>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -58,7 +58,7 @@
       </div>
       <br />
       <!-- Platform -->
-      <h5>Platform</h5>
+      <h5 class="platform">Platform</h5>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -85,12 +85,20 @@
       <br />
       <!-- Average Rating -->
       <h5 class="average">Average Rating</h5>
+      <star-rating
+        :item-size="20"
+        inactive-color="#ffffff"
+        active-color="#f26323"
+        :increment="1.0"
+        class="ml-3"
+      ></star-rating>
     </div>
   </div>
 </template>
 
 
 <script>
+import { StarRating } from "vue-rate-it";
 export default {
   name: "EmployeeFilters",
   data() {
@@ -98,14 +106,14 @@ export default {
   },
   computed: {},
   methods: {},
-  components: {}
+  components: { StarRating }
 };
 </script>
 
 
 <style scoped>
 .average {
-  margin-right: 95px;
+  margin-right: 75px;
 }
 h3 {
   color: #ffa737;
@@ -114,11 +122,18 @@ h5 {
   display: inline;
 }
 input {
-  width: 164px;
+  width: 145px;
   height: 25px;
+}
+.platform {
+  margin-right: 1px;
 }
 .scroll {
   overflow: auto;
+}
+.sideBorder {
+  border-left: #ffa737 solid 5px;
+  padding-left: 10px;
 }
 span {
   margin-left: -20px;
