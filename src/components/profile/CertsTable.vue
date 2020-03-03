@@ -41,7 +41,7 @@ export default {
     }
   },
   computed: {
-    //simplify this function. This filters through each item in the table (rows and columns) to display the row that contains the information entered in the searchbar. Currently case sensitive and search entry MUST match item in datatable exactly. 
+    //This filters through each item in the table (rows and columns) to display the row that contains the information entered in the searchbar. Currently case sensitive and search entry MUST match item in datatable exactly. When a row is added, my thought was to make it uppercase and add a filter on this function to uppercase all input in the searchbar??   
     filteredCerts(){
       return this.certs.filter((item) => {
         return item.certification.includes(this.search) || item.date.includes(this.search) || item.verified.includes(this.search)})
