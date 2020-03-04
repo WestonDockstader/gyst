@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-12 d-flex justify-content-between my-3">
       <input
+        id="searchbar"
         type="text"
         v-model="search"
         placeholder="Search"
@@ -78,8 +79,7 @@ tr:nth-child(even) {
   display: block;
 }
 #searchbar {
-  width: 20%;
-  height: 80%;
+  width:25%;
   font-size: 16px;
   padding-left: 10px;
   border: 1px solid #ddd;

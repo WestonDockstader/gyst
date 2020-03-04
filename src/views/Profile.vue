@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="card-body mt-5 mx-5">
+    <div class="card-body">
       <div class="row">
         <div class="col-4 position-absolute">
           <img
@@ -11,18 +11,18 @@
         </div>
       </div>
       <div class="row position">
-        <div class="col-4 text-left">
+        <div class="col-4 mb-5 text-left">
           <h1>Russell Crowe</h1>
           <h3>Marketing Specialist</h3>
         </div>
       </div>
       <div class="row position">
-        <div class="col-4 vl text-left">
-          <h3 class="pt-5 orange">Start Date:</h3>
-          <h3 class="pt-3 orange">Location:</h3>
+        <div class="col-5 text-left vl">
+          <h3 class="orange pb-4">Start Date:</h3>
+          <h3 class="orange">Location:</h3>
         </div>
         <div class="col-4 text-left">
-          <h3 class="pt-5 orange">Projects:</h3>
+          <h3 class="orange">Projects:</h3>
         </div>
       </div>
       <div class="pt-5">
@@ -95,7 +95,7 @@ export default {
   color: #f26323;
 }
 .vl {
-  border-right: 3px solid #f26323;
+  border-right: 2px solid #f26323;
 }
 .position {
   padding-left: 30%;

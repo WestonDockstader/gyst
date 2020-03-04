@@ -10,10 +10,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">ADD NEW SKILL</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title text-color">ADD NEW SKILL</h5>
         </div>
         <div class="modal-body">
           <div class="row">
@@ -90,5 +87,8 @@ export default {
 }
 .color {
   background-color: #474c53;
+}
+.text-color{
+  color: #f26323;
 }
 </style>
