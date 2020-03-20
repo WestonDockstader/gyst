@@ -90,6 +90,7 @@
         inactive-color="#ffffff"
         active-color="#f26323"
         :increment="1.0"
+        :max-rating="10"
         class="ml-3"
       ></star-rating>
     </div>
