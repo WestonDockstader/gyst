@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bTest">
+  <div class="bTest">
     <div class="row">
       <div class="col-10">
         <div class="row">
@@ -71,7 +71,7 @@
                     </div>
                   </th>
                   <th>
-                    <img src="../assets/user_fill.png" alt="UserImg" class="userImg" /> Jimmy Tester
+                    <img src="../assets/user_fill.png" alt="UserImg" class="userImg rounded-circle" /> Jimmy Tester
                   </th>
                   <th>
                     <ul>
@@ -122,7 +122,7 @@
                     </div>
                   </th>
                   <th>
-                    <img src="../assets/user_fill.png" alt="UserImg" class="userImg" /> Timmy Tester
+                    <img src="../assets/user_fill.png" alt="UserImg" class="userImg rounded-circle" /> Timmy Tester
                   </th>
                   <th>
                     <ul>
