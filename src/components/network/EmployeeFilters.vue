@@ -108,9 +108,9 @@
       </div>
       <br />
       <!-- Average Rating -->
-      <h6 class="average">Average Rating</h6>
+      <h6>Average Rating</h6>
       <star-rating
-        :item-size="15"
+        :item-size="13"
         inactive-color="#ffffff"
         active-color="#f26323"
         :increment="1.0"
