@@ -6,7 +6,7 @@
         <u>clear all</u>
       </p>
       <!-- Skills -->
-      <h5 class="mr-3">Skills</h5>
+      <h6 class="mr-3">Skills</h6>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -29,10 +29,18 @@
           <input type="checkbox" class="custom-control-input" id="customCheck4" />
           <label class="custom-control-label" for="customCheck4">Skill Name 4</label>
         </div>
+        <div class="custom-control custom-checkbox mt-1 mr-5">
+          <input type="checkbox" class="custom-control-input" id="customCheck17" />
+          <label class="custom-control-label" for="customCheck17">Skill Name 5</label>
+        </div>
+        <div class="custom-control custom-checkbox mt-1 mr-5">
+          <input type="checkbox" class="custom-control-input" id="customCheck18" />
+          <label class="custom-control-label" for="customCheck18">Skill Name 6</label>
+        </div>
       </div>
       <br />
       <!-- Domain -->
-      <h5 class="mr-1">Domain</h5>
+      <h6 class="mr-1">Domain</h6>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -55,10 +63,18 @@
           <input type="checkbox" class="custom-control-input" id="customCheck8" />
           <label class="custom-control-label" for="customCheck8">Skill Name 4</label>
         </div>
+        <div class="custom-control custom-checkbox mt-1 mr-5">
+          <input type="checkbox" class="custom-control-input" id="customCheck15" />
+          <label class="custom-control-label" for="customCheck15">Skill Name 5</label>
+        </div>
+        <div class="custom-control custom-checkbox mt-1 mr-5">
+          <input type="checkbox" class="custom-control-input" id="customCheck16" />
+          <label class="custom-control-label" for="customCheck16">Skill Name 6</label>
+        </div>
       </div>
       <br />
       <!-- Platform -->
-      <h5 class="platform">Platform</h5>
+      <h6 class="platform">Platform</h6>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -81,12 +97,20 @@
           <input type="checkbox" class="custom-control-input" id="customCheck12" />
           <label class="custom-control-label" for="customCheck12">Skill Name 4</label>
         </div>
+        <div class="custom-control custom-checkbox mt-1 mr-5">
+          <input type="checkbox" class="custom-control-input" id="customCheck13" />
+          <label class="custom-control-label" for="customCheck13">Skill Name 5</label>
+        </div>
+        <div class="custom-control custom-checkbox mt-1 mr-5">
+          <input type="checkbox" class="custom-control-input" id="customCheck14" />
+          <label class="custom-control-label" for="customCheck14">Skill Name 6</label>
+        </div>
       </div>
       <br />
       <!-- Average Rating -->
-      <h5 class="average">Average Rating</h5>
+      <h6 class="average">Average Rating</h6>
       <star-rating
-        :item-size="20"
+        :item-size="15"
         inactive-color="#ffffff"
         active-color="#f26323"
         :increment="1.0"
@@ -114,12 +138,12 @@ export default {
 
 <style scoped>
 .average {
-  margin-right: 75px;
+  margin-right: 90px;
 }
 h3 {
   color: #ffa737;
 }
-h5 {
+h6 {
   display: inline;
 }
 input {
@@ -131,6 +155,7 @@ input {
 }
 .scroll {
   overflow: auto;
+  height: 110px;
 }
 .sideBorder {
   border-left: #ffa737 solid 5px;
