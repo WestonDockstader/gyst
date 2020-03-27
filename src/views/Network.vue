@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-10">
         <div class="row">
-          <div class="col-4 text-left title">
+          <div class="col-5 text-left title">
             <h1>Networking</h1>
-            <h4 class="font-italic">Find a co-worker to connect with</h4>
+            <h3 class="font-italic">Find a co-worker to connect with</h3>
           </div>
         </div>
         <div class="row mt-1">
@@ -16,7 +16,7 @@
               <option value="20">20</option>
               <!-- Add more options here -->
             </select>
-            <p class="inline ml-2">items per page</p>
+            <p class="inline ml-2 items">items per page</p>
           </div>
           <div class="col-6 text-right">
             <input type="text" placeholder="Search name, skill, domain, place" class="searchInput" />
@@ -48,13 +48,13 @@
             <table class="table table-striped">
               <thead class="tableHeader text-white">
                 <tr>
-                  <th scope="col">Expand</th>
-                  <th scope="col">Employee</th>
-                  <th scope="col">Skill Name</th>
-                  <th scope="col">Domain</th>
-                  <th scope="col">Platforms</th>
-                  <th scope="col">Average Rating</th>
-                  <th scope="col">Connect</th>
+                  <th scope="col">EXPAND</th>
+                  <th scope="col">EMPLOYEE</th>
+                  <th scope="col">SKILL NAME</th>
+                  <th scope="col">DOMAIN</th>
+                  <th scope="col">PLATFORMS</th>
+                  <th scope="col">AVERAGE RATING</th>
+                  <th scope="col">CONNECT</th>
                 </tr>
               </thead>
               <tbody>
@@ -175,7 +175,7 @@
               <i class="fas fa-angle-left"></i>
             </button>
             <input type="text" class="inputPage mx-1" />
-            <p class="inline mx-1">of # pages</p>
+            <p class="inline pages mx-1">of # pages</p>
             <button>
               <i class="fas fa-angle-right"></i>
             </button>
@@ -243,6 +243,8 @@ li {
 }
 .searchInput {
   width: 276px;
+  font-family: "MyriadPro";
+  font-size: 17px;
 }
 span {
   margin-left: -20px;
@@ -256,6 +258,10 @@ tbody tr:nth-of-type(even) {
 tbody th {
   padding: 3px;
 }
+tbody tr th {
+  font-weight: 300;
+  color: #474c53;
+}
 .title {
   font-weight: bold;
   color: #474c53;
@@ -264,8 +270,28 @@ tbody th {
   width: 37px;
   height: 37px;
 }
+.items {
+  font-family: "MyriadPro";
+  font-size: 18px;
+}
 ul {
   list-style-type: none;
   padding: 0px;
+}
+h1 {
+  font-family: "Lato";
+  font-weight: bold;
+}
+h3 {
+  font-family: "Lato";
+  font-weight: 600;
+  margin-top: -6px;
+}
+table {
+  font-family: "Lato";
+}
+.pages {
+  font-family: "MyriadPro";
+  font-size: 16.5px;
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div class="sideBorder">
     <div>
-      <h3 class="mt-2">Employee Filters</h3>
+      <h6 class="mt-2 title">EMPLOYEE FILTERS</h6>
       <p class="text-right">
-        <u>clear all</u>
+        <u>Clear All</u>
       </p>
       <!-- Skills -->
-      <h6 class="mr-3">Skills</h6>
+      <h6 class="mr-3 inline sections">Skills</h6>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -40,7 +40,7 @@
       </div>
       <br />
       <!-- Domain -->
-      <h6 class="mr-1">Domain</h6>
+      <h6 class="mr-1 inline sections">Domain</h6>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -74,7 +74,7 @@
       </div>
       <br />
       <!-- Platform -->
-      <h6 class="platform">Platform</h6>
+      <h6 class="platform inline sections">Platform</h6>
       <input type="text" placeholder="Search" />
       <span>
         <!-- Potential problem with css if search string is really long -->
@@ -108,7 +108,7 @@
       </div>
       <br />
       <!-- Average Rating -->
-      <h6>Average Rating</h6>
+      <h6 class="sections text-left">Average Rating</h6>
       <star-rating
         :item-size="13"
         inactive-color="#ffffff"
@@ -140,15 +140,18 @@ export default {
 .average {
   margin-right: 90px;
 }
-h3 {
+.title {
   color: #ffa737;
+  font-weight: bold;
+  font-size: 18px;
 }
-h6 {
+.inline {
   display: inline;
 }
 input {
-  width: 145px;
+  width: 120px;
   height: 25px;
+  font-family: "MyriadPro";
 }
 .platform {
   margin-right: 1px;
@@ -166,8 +169,20 @@ span {
 }
 u {
   color: #f26323;
+  font-family: "Lato";
+  font-size: 14px;
 }
 u:hover {
   cursor: pointer;
+}
+.sections {
+  font-family: "Lato";
+  font-weight: bold;
+  color: #474c53;
+}
+label {
+  font-family: "Lato";
+  font-weight: 300;
+  color: #474c53;
 }
 </style>

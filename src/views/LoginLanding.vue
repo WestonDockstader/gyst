@@ -32,9 +32,9 @@
               </div>
               <div class="form-check text-left">
                 <input type="checkbox" class="form-check-input" id="rememberMeCheck" />
-                <label class="form-check-label" for="rememberMeCheck">Remember Me</label>
+                <label class="form-check-label lightText" for="rememberMeCheck">Remember Me</label>
               </div>
-              <div class="mt-2">
+              <div class="mt-2 lightText">
                 <p>
                   New Employee?
                   <span class="orangeText">Get Started Here</span>
