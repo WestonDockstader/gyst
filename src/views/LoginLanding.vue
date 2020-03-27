@@ -4,9 +4,9 @@
       <div class="col-7 bgImg d-flex">
         <div class="bgCircle d-flex rounded-circle mx-auto">
           <h1 class="text-white m-auto">
-            Office Networking
+            <span class="letterSpacing">Office</span> Networking
             <br />
-            <i>reimagined</i>
+            <i class="letterSpacing">reimagined</i>
           </h1>
         </div>
       </div>
@@ -19,7 +19,7 @@
         <div class="row mx-auto mt-5">
           <div class="col-12">
             <h4
-              class="text-white text-left"
+              class="text-white text-left mx-1"
             >Welcome to Project GYST. Sign in to start exploring your network.</h4>
             <form class="text-white mt-4">
               <div class="form-group text-left">
@@ -37,10 +37,10 @@
               <div class="mt-2">
                 <p>
                   New Employee?
-                  <span>Get Started Here</span>
+                  <span class="orangeText">Get Started Here</span>
                 </p>
               </div>
-              <button type="submit" class="btn signInBtn">Sign In</button>
+              <button type="submit" class="btn signInBtn">SIGN IN</button>
             </form>
           </div>
         </div>
@@ -73,8 +73,8 @@ export default {
 }
 .bgCircle {
   background: rgba(242, 99, 35, 0.82);
-  height: 50vh;
-  width: 50vh;
+  height: 55vh;
+  width: 55vh;
   margin-top: 35vh;
 }
 .bgColor {
@@ -85,25 +85,40 @@ export default {
   color: white;
   width: 50vh;
   font-size: 24px;
+  font-family: "Lato-Medium";
+  letter-spacing: 3px;
 }
 .logo {
   height: 15vh;
 }
+.orangeText {
+  text-decoration: underline;
+  color: #ffa737;
+}
+.letterSpacing {
+  letter-spacing: 7px;
+}
 h1 {
   font-size: 8vh;
-  font-family: "HelveticaNeue-Medium";
+  font-family: "HelveticaNeue";
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 h4 {
   font-family: "Lato-Medium";
-}
-span {
-  text-decoration: underline;
-  color: #ffa737;
+  letter-spacing: 2px;
 }
 input {
   background-color: #474c53;
 }
 input:focus {
   background-color: #474c53;
+}
+label {
+  font-family: "Lato-Regular";
+  letter-spacing: 2px;
+}
+p {
+  font-family: "Lato-Light";
+  letter-spacing: 2px;
 }
 </style>
