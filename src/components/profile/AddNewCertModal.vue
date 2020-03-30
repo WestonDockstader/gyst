@@ -10,7 +10,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title text-color">ADD NEW CERTIFICATION</h5>
+          <h3 class="modal-title text-color mx-auto">ADD NEW CERTIFICATION</h3>
         </div>
         <div class="modal-body">
           <div class="row">
@@ -28,17 +28,17 @@
             <div class="col-6">
               <h5 class="d-flex display-content-start">Date Received</h5>
               <div class="input-group input-group-sm mb-3">
-                <div class="input-group-append">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">
-                    <i class="far fa-calendar-alt"></i>
-                  </span>
-                </div>
                 <input
                   type="text"
                   class="form-control"
                   aria-label="Small"
                   aria-describedby="inputGroup-sizing-sm"
                 />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <i class="far fa-calendar-alt"></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -57,8 +57,15 @@
           </div>
           <div class="modal-footer">
             <div class="col-12 mt-4">
-              <button type="button" class="btn btn-color-1 text-white" data-dismiss="modal">CANCEL</button>
-              <button type="button" class="btn btn-color-2 text-white ml-2">SUBMIT FOR APPROVAL</button>
+              <button
+                type="button"
+                class="btn btn-color-1 text-white btnText"
+                data-dismiss="modal"
+              >CANCEL</button>
+              <button
+                type="button"
+                class="btn btn-color-2 text-white ml-2 btnText"
+              >SUBMIT FOR APPROVAL</button>
             </div>
           </div>
         </div>
@@ -86,18 +93,45 @@ export default {
   border: dashed 3px #ffa737;
   background-color: rgba(255, 167, 55, 0.11);
 }
-.btn-files{
+.btn-files {
   width: 40%;
   border-radius: 6px;
   background-color: #ffa737;
+  font-family: "HelveticaNeue";
 }
 .btn-color-1 {
   background-color: #474c53;
+  width: 45%;
 }
 .btn-color-2 {
   background-color: #f26323;
 }
-.text-color{
+.text-color {
   color: #f26323;
+}
+.btnText {
+  font-family: "Lato";
+  letter-spacing: 0.5px;
+}
+h3 {
+  font-family: "Lato";
+  font-weight: bold;
+  letter-spacing: 1.75px;
+}
+h5 {
+  font-family: "Lato";
+  color: #474c53;
+  letter-spacing: 1.9px;
+}
+h4 {
+  font-family: "HelveticaNeue";
+  color: #474c53;
+  letter-spacing: 3px;
+}
+h6 {
+  font-family: "HelveticaNeue";
+  color: #474c53;
+  font-weight: 100;
+  letter-spacing: 1.75px;
 }
 </style>

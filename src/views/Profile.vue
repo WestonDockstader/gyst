@@ -10,18 +10,22 @@
       </div>
     </div>
     <div class="row position">
-      <div class="col-4 mb-5 text-left">
-        <h1>Russell Crowe</h1>
-        <h3>Marketing Specialist</h3>
+      <div class="col-4 mb-5 text-left titleFont">
+        <h1>
+          <b>Russell Crowe</b>
+        </h1>
+        <h3>
+          <i>Marketing Specialist</i>
+        </h3>
       </div>
     </div>
     <div class="row position">
       <div class="col-5 text-left vl">
-        <h3 class="orange pb-4">Start Date:</h3>
-        <h3 class="orange">Location:</h3>
+        <h3 class="orange pb-4">START DATE:</h3>
+        <h3 class="orange">LOCATION:</h3>
       </div>
       <div class="col-4 text-left">
-        <h3 class="orange">Projects:</h3>
+        <h3 class="orange">PROJECTS:</h3>
       </div>
     </div>
     <div class="pt-5">
@@ -91,6 +95,8 @@ export default {
 }
 .orange {
   color: #f26323;
+  font-family: "Lato";
+  font-weight: bold;
 }
 .vl {
   border-right: 2px solid #f26323;
@@ -101,5 +107,9 @@ export default {
 .active_tab {
   font-weight: bold;
   color: #ffa737 !important;
+}
+.titleFont {
+  font-family: "Lato";
+  color: #474c53;
 }
 </style>
