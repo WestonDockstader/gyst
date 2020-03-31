@@ -20,6 +20,22 @@
           </tr>
         </tbody>
       </table>
+      <div class="col-12 my-2 mx-auto">
+        <button class="mx-1 navBtn">
+          <i class="fas fa-angle-double-left navBtnClr"></i>
+        </button>
+        <button class="navBtn">
+          <i class="fas fa-angle-left navBtnClr"></i>
+        </button>
+        <input type="text" class="inputPage mx-1" />
+        <p class="inline pages mx-1">of # pages</p>
+        <button class="navBtn">
+          <i class="fas fa-angle-right navBtnClr"></i>
+        </button>
+        <button class="mx-1 navBtn">
+          <i class="fas fa-angle-double-right navBtnClr"></i>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -75,11 +91,32 @@ td {
 }
 .my-custom-scrollbar {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   overflow: auto;
 }
 .table-wrapper-scroll-y {
   display: block;
+}
+.inputPage {
+  width: 50px;
+  height: 25px;
+  border-radius: 3px;
+  border: solid 0.5px #474c53;
+  color: #f26323;
+}
+.inline {
+  display: inline;
+}
+.navBtn {
+  background-color: #c7ced8;
+  border: solid 0.5px #474c53;
+  color: #474c53;
+  width: 34px;
+  height: 25px;
+  border-radius: 3px;
+}
+.navBtnClr {
+  color: #474c53;
 }
 #searchbar {
   width: 25%;
