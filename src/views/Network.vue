@@ -1,5 +1,5 @@
 <template>
-  <div class="bTest">
+  <div>
     <div class="row">
       <div class="col-10">
         <div class="row">
@@ -211,9 +211,6 @@ export default {
 </script>
 
 <style scoped>
-.bTest {
-  background-color: #ffffff;
-}
 button {
   background-color: #c7ced8;
   border: solid 0.5px #474c53;

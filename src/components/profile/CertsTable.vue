@@ -91,7 +91,7 @@ td {
 }
 .my-custom-scrollbar {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   overflow: auto;
 }
 .table-wrapper-scroll-y {
