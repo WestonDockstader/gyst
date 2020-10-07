@@ -1,18 +1,19 @@
 <template>
+  <div></div>
 </template>
 
 
 <script>
-export default {
-  name: "org-table",
-  data() {
-    return {
-    };
-  },
-  computed: {},
-  methods: {},
-  components: {}
-};
+  export default {
+    name: "org-table",
+    data() {
+      return {
+      };
+    },
+    computed: {},
+    methods: {},
+    components: {}
+  };
 </script>
 
 

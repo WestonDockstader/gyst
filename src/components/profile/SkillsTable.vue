@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row col-12">
     <div class="col-12 d-flex justify-content-between my-3">
       <input id="searchbar" type="text" v-model="search" placeholder="Search" />
       <button class="btn">
@@ -14,12 +14,11 @@
           <th v-for="header in tableHeader" :key="header">{{header}}</th>
         </thead>
         <tbody>
-          <tr v-for="item in filteredSkills" :key="item">
-            <td>{{item.skillName}}</td>
-            <td>{{item.domain}}</td>
-            <td>{{item.platforms}}</td>
-            <td>{{item.ratingsM}}</td>
-            <td>{{item.ratingsP}}</td>
+          <tr v-for="obj in filteredSkills" :key="obj._id">
+            <td>{{obj.Skill}}</td>
+            <td>{{obj.Domain}}</td>
+            <td>{{obj.Platform}}</td>
+
           </tr>
         </tbody>
       </table>
@@ -44,129 +43,107 @@
 </template>
 
 <script>
-import AddNewSkillModal from "./AddNewSkillModal";
+  import AddNewSkillModal from "./AddNewSkillModal";
 
-export default {
-  name: "skills-table",
-  data() {
-    return {
-      tableHeader: [
-        "SKILL NAME",
-        "DOMAIN",
-        "PLATFORMS",
-        "RATINGS(M)",
-        "RATINGS(P)"
-      ],
-      skills: [
-        {
-          skillName: "Javascript",
-          domain: "UX/UI",
-          platforms: "All Web Browsers",
-          ratingsM: 5,
-          ratingsP: 5
-        },
-        {
-          skillName: "C#",
-          domain: "Back-end development",
-          platforms: "MacOS",
-          ratingsM: 5,
-          ratingsP: 5
-        },
-        {
-          skillName: "LOREM",
-          domain: "IPSUM",
-          platforms: "FOOBAR",
-          ratingsM: 5,
-          ratingsP: 5
-        },
-        {
-          skillName: "LOREM",
-          domain: "IPSUM",
-          platforms: "FOOBAR",
-          ratingsM: 5,
-          ratingsP: 5
-        },
-        {
-          skillName: "LOREM",
-          domain: "IPSUM",
-          platforms: "FOOBAR",
-          ratingsM: 5,
-          ratingsP: 5
-        },
-        {
-          skillName: "LOREM",
-          domain: "IPSUM",
-          platforms: "FOOBAR",
-          ratingsM: 5,
-          ratingsP: 5
+  export default {
+    name: "skills-table",
+    props: ['user'],
+    data() {
+      return {
+        tableHeader: [
+          "SKILL NAME",
+          "DOMAIN",
+          "PLATFORMS",
+        ],
+        filtered: this.user,
+        search: ""
+      };
+    },
+    computed: {
+      filteredSkills() {
+        if (this.search === undefined) {
+          return this.filtered.skills, console.log("not searching")
         }
-      ],
-      search: ""
-    };
-  },
-  computed: {
-    //This filters through each item in the table (rows and columns) to display the row that contains the information entered in the searchbar. Currently case sensitive and search entry MUST match item in datatable exactly. When a row is added, my thought was to make it uppercase and add a filter on this function to uppercase all input in the searchbar??
-    filteredSkills() {
-      return this.skills.filter(item => {
-        return (
-          item.skillName.match(this.search) ||
-          item.domain.match(this.search) ||
-          item.platforms.match(this.search)
-        );
-      });
-    }
-  },
-  methods: {},
-  components: { AddNewSkillModal }
-};
+        else {
+          return this.filtered.skills.filter(items => {
+            return (
+              items.Skill.toLowerCase().includes(this.search.toLowerCase()) ||
+              items.Domain.toLowerCase().includes(this.search.toLowerCase()) ||
+              items.Platform.toLowerCase().includes(this.search.toLowerCase())
+            );
+          });
+        }
+      },
+      skills() {
+        return this.$store.state.skills
+      },
+      domains() {
+        return this.$store.state.domains
+      },
+      platforms() {
+        return this.$store.state.platforms
+      }
+    },
+    methods: {},
+    components: { AddNewSkillModal }
+  };
 </script>
 
 
 <style scoped>
-i {
-  color: #f26323;
-}
-thead {
-  background-color: #f26323;
-  position: sticky;
-  top: 0;
-}
-tr:nth-child(even) {
-  background-color: rgb(242, 99, 35, 0.35);
-}
-.my-custom-scrollbar {
-  position: relative;
-  height: 40vh;
-  overflow: auto;
-}
-.table-wrapper-scroll-y {
-  display: block;
-}
-.inputPage {
-  width: 50px;
-  height: 25px;
-  border-radius: 3px;
-  border: solid 0.5px #474c53;
-  color: #f26323;
-}
-.inline {
-  display: inline;
-}
-.navBtn {
-  background-color: #c7ced8;
-  border: solid 0.5px #474c53;
-  color: #474c53;
-  width: 34px;
-  height: 25px;
-  border-radius: 3px;
-}
-.navBtnClr {
-  color: #474c53;
-}
-#searchbar {
-  width: 25%;
-  font-size: 16px;
-  padding-left: 10px;
-  border: 1px solid #ddd;
-}
+  i {
+    color: #f26323;
+  }
+
+  thead {
+    background-color: #f26323;
+    position: sticky;
+    top: 0;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgb(242, 99, 35, 0.35);
+  }
+
+  .my-custom-scrollbar {
+    position: relative;
+    height: 40vh;
+    overflow: auto;
+  }
+
+  .table-wrapper-scroll-y {
+    display: block;
+  }
+
+  .inputPage {
+    width: 50px;
+    height: 25px;
+    border-radius: 3px;
+    border: solid 0.5px #474c53;
+    color: #f26323;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .navBtn {
+    background-color: #c7ced8;
+    border: solid 0.5px #474c53;
+    color: #474c53;
+    width: 34px;
+    height: 25px;
+    border-radius: 3px;
+  }
+
+  .navBtnClr {
+    color: #474c53;
+  }
+
+  #searchbar {
+    width: 25%;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+  }
 </style>

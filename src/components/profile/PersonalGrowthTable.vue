@@ -1,18 +1,19 @@
 <template>
+  <div></div>
 </template>
 
 
 <script>
-export default {
-  name: "personal-growth-table",
-  data() {
-    return {
-    };
-  },
-  computed: {},
-  methods: {},
-  components: {}
-};
+  export default {
+    name: "personal-growth-table",
+    data() {
+      return {
+      };
+    },
+    computed: {},
+    methods: {},
+    components: {}
+  };
 </script>
 
 

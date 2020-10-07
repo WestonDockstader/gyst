@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "bootstrap-vue": "^2.5.0",
+    "method-override": "^3.0.0",
     "portal-vue": "^2.1.7",
     "vue": "^2.6.10",
     "vue-nav-tabs": "^0.5.7",
