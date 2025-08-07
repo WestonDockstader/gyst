@@ -306,6 +306,25 @@ cd gyst-mobile && npx expo start --web
 npm install                    # Install dependencies
 npm audit fix                  # Fix security vulnerabilities
 npm update                     # Update packages
+
+# Stopping Applications
+# Stop React web app (port 3000)
+Ctrl + C                       # In terminal where app is running
+lsof -ti:3000 | xargs kill -9  # Force kill processes on port 3000
+
+# Stop backend server (port 3001)
+Ctrl + C                       # In terminal where server is running
+lsof -ti:3001 | xargs kill -9  # Force kill processes on port 3001
+
+# Stop Expo mobile app
+Ctrl + C                       # In terminal where expo is running
+# Or close Expo Dev Tools in browser
+
+# Find what's running on a specific port
+lsof -ti:PORT_NUMBER           # Replace PORT_NUMBER with actual port
+
+# Kill specific process by ID
+kill -9 PROCESS_ID             # Replace PROCESS_ID with actual ID
 ```
 
 ## 📚 Additional Resources
