@@ -1,6 +1,6 @@
 # Gyst - Cross-Platform Professional Network Application
 
-## 📋 Project Overview
+## Project Overview
 
 Gyst is a professional networking and skill management platform built with modern React technologies. The project demonstrates a complete cross-platform solution with:
 
@@ -8,7 +8,7 @@ Gyst is a professional networking and skill management platform built with moder
 - **React Native Mobile Application** (React Native Elements + Expo)
 - **Express.js Backend API** (Session-based authentication)
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### Prerequisites
 - Node.js (v24.5.0 or later)
@@ -37,14 +37,14 @@ npx expo start --ios
 ```
 **Access:** iOS Simulator will launch automatically
 
-## 🔐 Demo Credentials
+## Demo Credentials
 
 **Email:** `demo@gyst.com`  
 **Password:** `password123`
 
 *Or create a new account on either platform*
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 gyst/
@@ -68,7 +68,7 @@ gyst/
 └── PROJECT_GUIDE.md         # Comprehensive project documentation
 ```
 
-## ✨ Key Features
+## Key Features
 
 ### Authentication System
 - **Session-based Authentication:** Secure login/logout with server sessions
@@ -86,7 +86,7 @@ gyst/
 - **Mobile:** React Native with Expo for cross-platform development
 - **State Management:** React Context API for global state
 
-## 🛠️ Development Commands
+## Development Commands
 
 ### Backend Server
 ```bash
@@ -113,7 +113,7 @@ npx expo start --ios         # Start with iOS simulator
 npx expo start --android     # Start with Android emulator
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 - **Port conflicts:** Ensure ports 3000 and 3001 are available
@@ -126,12 +126,12 @@ npm audit fix                 # Fix security vulnerabilities
 npm update                    # Update packages to latest versions
 ```
 
-## 📱 Platform Support
+## Platform Support
 
 - **Web:** Modern browsers (Chrome, Firefox, Safari, Edge)
 - **Mobile:** iOS 11+ and Android 6.0+ (via Expo)
 - **Development:** macOS, Windows, Linux
 
-## 🤝 Contributing
+## Contributing
 
 This project demonstrates modern cross-platform development practices. Feel free to explore the codebase to understand the implementation of shared authentication, API integration, and responsive design patterns.
